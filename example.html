@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+<body>
+<form>
+    <input id="scanInput" class="sti-input" />
+    <button id="reset" type="button" class="sti-manual-click">Submit</button>
+</form>
+
+<br/>
+<div>
+    <h2>Results:</h2>
+    <div>Key Enter: <span id="keyentered"></span></div>
+    <div id="buttonaction"></div>
+</div>
+
+<script src="scantoinput.jquery.js"></script>
+
+
+<script>
+    $('.sti-manual-click').click(function() {
+        $('#keyentered').html($('#scanInput').val());
+        $('#buttonaction').html('Submit Button clicked.');
+    })
+</script>
+<style>
+    .resultItem {
+        padding: 8px;
+    }
+
+    .Scanner {
+        background-color: lightgreen;
+    }
+    .Keyboard {
+        background-color: antiquewhite;
+    }
+    #resultsList div:first-of-type {
+        border: 1px solid black;
+    }
+</style>
+</body>
